@@ -8,7 +8,7 @@ function Application() {
   const [name, setName] = useState("");
   const [text, setText] = useState("");
   const [postList, setPostList] = useState([]);
-  const [modelIsVisible, setModelIsVisible] = useState(true);
+  const [modelIsVisible, setModelIsVisible] = useState(false);
 
   function submitData(event) {
     event.preventDefault();

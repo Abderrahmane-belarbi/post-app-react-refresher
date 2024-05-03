@@ -1,9 +1,11 @@
 .container {
   background-color: #0c0c0c;
   padding: 10px 30px;
-  border-radius: 15px;
-  width: auto;
-  height: 150px;
+  border-radius: 10px;
+  max-width: 315px;
+  height: 200px;
+  line-break: anywhere;
+  overflow: hidden;
 }
 .header1 {
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -11,10 +13,21 @@
   color: #eee;
   margin-bottom: 20px;
   text-align: left;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .paragraph {
   font-family: monospace;
   font-size: large;
   color: #ccc;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 6; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
