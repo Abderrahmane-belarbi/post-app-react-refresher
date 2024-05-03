@@ -1,6 +1,7 @@
 form {
     max-width: 300px;
-    margin: 60px auto;
+    height: 300px;
+    margin: auto;
     background-color: #0c0c0c;
     padding: 10px 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

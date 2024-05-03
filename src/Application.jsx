@@ -8,6 +8,7 @@ function Application() {
   const [name, setName] = useState("");
   const [text, setText] = useState("");
   const [postList, setPostList] = useState([]);
+  const [modelIsVisible, setModelIsVisible] = useState(true);
 
   function submitData(event) {
     event.preventDefault();
@@ -16,7 +17,8 @@ function Application() {
       setName("");
       setText("");
     }
-    console.log(postList);
+
+    setModelIsVisible(false);
   }
 
   function inputHandler(event) {
@@ -27,19 +29,25 @@ function Application() {
     }
   }
 
+  function modelOff() {
+    setModelIsVisible(false);
+  }
+
   return (
     <div className="container">
       <h1 className="header1">Posts App</h1>
       <header className="app-header">
-        <Model>
-          <NewPost
-            inputHandler={inputHandler}
-            submitData={submitData}
-            name={name}
-            text={text}
-          />
-        </Model>
-        <PostsList postList={postList} />
+          {modelIsVisible && (
+            <Model modelOff={modelOff}>
+              <NewPost
+                inputHandler={inputHandler}
+                submitData={submitData}
+                name={name}
+                text={text}
+              />
+            </Model>
+          )}
+          <PostsList postList={postList} />
       </header>
     </div>
   );

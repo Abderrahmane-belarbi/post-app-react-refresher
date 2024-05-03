@@ -1,9 +1,8 @@
 .container {
-  margin: 25px 5px;
   background-color: #0c0c0c;
   padding: 10px 30px;
-  border-radius: 7px;
-  width: 300px;
+  border-radius: 15px;
+  width: auto;
   height: 150px;
 }
 .header1 {
