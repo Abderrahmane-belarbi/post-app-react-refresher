@@ -3,3 +3,28 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: #111;
+}
+
+.app-header {
+  margin: auto;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+}
+
+
+
+.header1 {
+  color: #eee;
+  width: 100%;
+  background-color: #0c0c0c;
+  padding: 20px;
+  font-family: 'Arial Narrow Bold', sans-serif;
+  margin-bottom: 20px;
+  text-align: center;
+}

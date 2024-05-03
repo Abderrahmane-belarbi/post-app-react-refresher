@@ -1,0 +1,8 @@
+.container {
+    background-color: #0f0f0f;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
