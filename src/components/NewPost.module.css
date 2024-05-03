@@ -40,3 +40,24 @@ input {
     flex-direction: column;
     
 }
+
+button {
+    outline: none;
+    border: 1px solid #222;
+    box-shadow: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    color: #eee;
+    background-color: #111;
+}
+
+
+button:hover{
+    background-color: #222;
+    cursor: pointer;
+}
+
+button:active{
+    background-color: #111;
+    cursor: pointer;
+}
