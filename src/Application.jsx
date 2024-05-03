@@ -32,29 +32,32 @@ function Application() {
   function modelOff() {
     setModelIsVisible(false);
   }
-  function modelOn(){
+  function modelOn() {
     setModelIsVisible(true);
   }
 
   return (
     <div className="container">
       <h1 className="header1">Posts App</h1>
-      <header className="app-header">
-      <div className="buttonDiv">
-        <button onClick={modelOn}>Add New Post</button>
-      </div>
-          {modelIsVisible && (
-            <Model modelOff={modelOff}>
-              <NewPost
-                inputHandler={inputHandler}
-                submitData={submitData}
-                name={name}
-                text={text}
-              />
-            </Model>
-          )}
-          <PostsList postList={postList} />
-      </header>
+        <div className="buttonDiv">
+          <button onClick={modelOn}>Add New Post</button>
+        </div>
+        {modelIsVisible && (
+          <Model modelOff={modelOff}>
+            <NewPost
+              inputHandler={inputHandler}
+              submitData={submitData}
+              name={name}
+              text={text}
+            />
+          </Model>
+        )}
+        {postList.length > 0 ? (
+        <PostsList postList={postList} />
+
+        ) : (
+          <h1 className="noposts">That is no Posts</h1>
+        )}
     </div>
   );
 }

@@ -8,11 +8,6 @@ body {
   background-color: #111;
 }
 
-.app-header {
-  
-  margin: auto;
-}
-
 .container {
   max-width: 700px;
   background-color: #0f0f0f;
@@ -26,12 +21,21 @@ body {
   background-color: #0f0f0f;
   padding: 20px;
   font-family: "Arial Narrow Bold", sans-serif;
-  margin-bottom: 20px;
   text-align: center;
 }
 
 .buttonDiv{
   display: flex;
   justify-content: end;
-  margin: 0 50px;
+  margin: 0 20px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.noposts {
+  font-family: monospace;
+  margin-top: 50px;
+  color: #5555b6;
+  text-align: center;
 }

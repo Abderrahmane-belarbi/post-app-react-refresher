@@ -11,7 +11,6 @@ export default function PostsList({postList}) {
         author={post.name}
         body={post.text}
       />
-
     ))}
     </ul>
   );
