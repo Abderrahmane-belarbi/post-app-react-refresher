@@ -32,11 +32,17 @@ function Application() {
   function modelOff() {
     setModelIsVisible(false);
   }
+  function modelOn(){
+    setModelIsVisible(true);
+  }
 
   return (
     <div className="container">
       <h1 className="header1">Posts App</h1>
       <header className="app-header">
+      <div className="buttonDiv">
+        <button onClick={modelOn}>Add New Post</button>
+      </div>
           {modelIsVisible && (
             <Model modelOff={modelOff}>
               <NewPost
