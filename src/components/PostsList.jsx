@@ -1,25 +1,18 @@
 import Post from "./Post";
-import classes from './PostsList.modules.css';
+import classes from './PostsList.module.css';
 
-export default function PostsList() {
+export default function PostsList({postList}) {
+
   return (
     <ul className={classes.container}>
+    {postList.map((post, id) => (
       <Post
-        author="Jone Doe"
-        body="An Ex Web dev"
+        key={id}
+        author={post.name}
+        body={post.text}
       />
-      <Post
-        author="Jone Doe"
-        body="An Ex Web dev"
-      />
-      <Post
-        author="Jone Doe"
-        body="An Ex Web dev"
-      />
-      <Post
-        author="Jone Doe"
-        body="An Ex Web dev"
-      />
+
+    ))}
     </ul>
   );
 }
