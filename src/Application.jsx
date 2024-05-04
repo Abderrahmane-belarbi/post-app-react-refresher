@@ -3,6 +3,7 @@ import "./Application.css";
 import NewPost from "./components/NewPost";
 import PostsList from "./components/PostsList";
 import Model from "./components/Model";
+import PostContent from "./components/PostContent";
 
 function Application() {
   const [name, setName] = useState("");

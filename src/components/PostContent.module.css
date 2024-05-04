@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #111;
+  }
+  
+  .h_p_div {
+    max-width: 700px;
+    background-color: #0f0f0f;
+    height: 100vh;
+    margin: auto;
+    padding: 20px 0;
+  }
+
+
+.header {
+    text-align: center;
+    color: #eee;
+    font-size: 38px;
+    margin-bottom: 40px;
+    font-family: monospace;
+}
+
+.paragraph {
+    margin: 0 40px;
+    color: #eee;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
