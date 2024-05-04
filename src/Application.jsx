@@ -11,6 +11,7 @@ function Application() {
   const [modelIsVisible, setModelIsVisible] = useState(false);
   const [isDataLoading, setIsDataLoading] = useState(false);
   let currentPost = {};
+
   useEffect(() => {
     async function fetchPosts() {
       setIsDataLoading(true);
@@ -24,12 +25,13 @@ function Application() {
 
   function submitData(event) {
     event.preventDefault();
+
     if (name.length !== 0 && text.length !== 0) {
       currentPost = { name: name, text: text };
       setPostList([currentPost, ...postList]);
       setName("");
       setText("");
-    }
+    } else return;
 
     fetch("http://localhost:8080/posts", {
       method: "POST",
@@ -66,6 +68,7 @@ function Application() {
       {modelIsVisible && (
         <Model modelOff={modelOff}>
           <NewPost
+            setModelIsVisible={setModelIsVisible}
             inputHandler={inputHandler}
             submitData={submitData}
             name={name}

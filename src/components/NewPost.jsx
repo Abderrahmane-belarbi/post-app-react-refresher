@@ -1,10 +1,10 @@
 import classes from "./NewPost.module.css";
 
-export default function NewPost({ submitData, inputHandler, name, text }) {
+export default function NewPost({ setModelIsVisible, submitData, inputHandler, name, text }) {
   return (
     <form onSubmit={(event) => submitData(event)}>
       <div className={classes.formCancelButtonDiv}>
-        <button className={classes.formCancelButton}>x</button>
+        <button className={classes.formCancelButton} onClick={() => {setModelIsVisible(false)}}>x</button>
       </div>
       <div className={classes.textDiv}>
         <label>Text</label>
